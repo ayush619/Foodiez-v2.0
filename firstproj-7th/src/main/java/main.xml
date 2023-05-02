@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="hotel" class="com.ayush.springmvcboot.Hotel">
+	<property name="name" value="Asian Cafe"></property>
+	<property name="Menu" ref="menu"></property>
+</bean>
+
+<bean id="m1" name="menu" class="com.ayush.springmvcboot.menu">
+<property name="dishes">
+<map>
+<entry key="Veg-Pizza" value="100"/>
+<entry key="Veg-Burger" value="120"/>
+<entry key="Chicken-Pizza" value="170"/>
+<entry key="Chicken-Burger" value="200"/>
+</map>
+</property>
+</bean>
+
+<bean name="hotel2" class="com.ayush.springmvcboot.Hotel">
+	<property name="name" value="Retro Resturant"></property>
+	<property name="Menu" ref="menu2"></property>
+</bean>
+
+<bean id="m2" name="menu2" class="com.ayush.springmvcboot.menu">
+<property name="dishes">
+<map>
+<entry key="Idli" value="20"/>
+<entry key="Plain Dosa" value="60"/>
+<entry key="Masala Dosa" value="70"/>
+<entry key="Vadapav" value="65"/>
+</map>
+</property>
+</bean>
+
+
+<bean name="hotel3" class="com.ayush.springmvcboot.Hotel">
+	<property name="name" value="Hotel Taj"></property>
+	<property name="Menu" ref="menu3"></property>
+</bean>
+
+<bean id="m3" name="menu3" class="com.ayush.springmvcboot.menu">
+<property name="dishes">
+<map>
+<entry key="Veg-Biriyani" value="120"/>
+<entry key="Chicken-Biriyani" value="160"/>
+<entry key="Mutton-Biriyani" value="200"/>
+<entry key="Seenk-Kabab" value="165"/>
+</map>
+</property>
+</bean>
+
+
+
+
+<bean name="userdef" class="com.ayush.springmvcboot.User">
+<property name="usrdb">
+<map>
+<entry key="Anand@gmail.com" value="Anand@123"/>
+<entry key="Joshi@gmail.com" value="Joshi@123"/>
+<entry key="admin@gmail.com" value="admin@123"/>
+</map>
+</property>
+</bean>
+
+
+
+</beans>
